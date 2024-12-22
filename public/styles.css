@@ -1,0 +1,240 @@
+body {
+  background-image: url('study1.jpg');
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Gaya Pomodoro Timer */
+.pomodoro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.pomodoro h2 {
+    color: #6d6875;
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.pomodoro input {
+    width: 30%;
+    padding: 12px;
+    margin-bottom: 1px;
+    border: 1px solid #eacdc2;
+    border-radius: 5px;
+    background-color: #fdf3f0;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.pomodoro button {
+    background-color: #6cd4d1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    cursor: pointer;
+    width: 80%;
+    margin-top: 0px;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.1rem;
+    max-width: 100%;
+}
+
+.pomodoro button:hover {
+    background-color: #9aa5a9;
+}
+
+#timer-display {
+    font-size: 2rem;
+    color: #5c5b5e;
+    margin-top: 1px;
+    background-color: #fafafa;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #eacdc2;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#timer-label {
+    color: #5f5a66;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+#congrats-message {
+    color: rgb(84, 178, 84);
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Responsif untuk Pomodoro */
+@media (max-width: 768px) {
+    .pomodoro {
+        padding: 15px;
+    }
+
+    .pomodoro h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    #timer-display {
+        font-size: 1.5rem;
+    }
+
+    .pomodoro button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pomodoro {
+        padding: 10px;
+    }
+
+    .pomodoro h2 {
+        font-size: 1.5rem;
+    }
+
+    .pomodoro input {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    #timer-display {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* Gaya To-Do List */
+.todo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  .todo h2 {
+    color: #6d6875;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .todo input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #eacdc2;
+    border-radius: 5px;
+    background-color: #fdf3f0;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .todo button {
+    background-color: #6cd4d1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 0px;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.1rem;
+    max-width: 30%;
+  }
+  
+  .todo button:hover {
+    background-color: #9aa5a9;
+  }
+  
+  #task-list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  #task-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fafafa;
+    padding: 12px 16px;
+    border-radius: 5px;
+    border: 1px solid #eacdc2;
+    margin-bottom: 10px;
+    max-height: 40px; 
+  }
+
+  #task-list li .task-content {
+    display: flex; 
+    align-items: center; 
+    flex-grow: 1; 
+  }
+
+  #task-list li input[type="checkbox"] {
+    margin-right: 10px; 
+    width: 18px; 
+    height: 18px;
+  }
+  
+  #task-list li span {
+    text-align: left;
+    flex-grow: 1;
+    font-size: 1rem;
+    color: #5c5b5e;
+    white-space: normal;
+    overflow-wrap: break-word;
+    max-width: 70%;
+  }
+  
+  #task-list li button {
+    background-color: #f77589;
+    padding: 6px 12px;
+    border-radius: 10px;
+    color: #fff;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1rem;
+    margin-left: 10px;
+    flex-shrink: 0;
+    width: auto;
+    max-width: 90px;
+  }
+  
+  #task-list li button:hover {
+    background-color: #e5989b;
+  }
+  
+  #empty-message {
+    color: #9d8189;
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-top: 20px;
+  }
